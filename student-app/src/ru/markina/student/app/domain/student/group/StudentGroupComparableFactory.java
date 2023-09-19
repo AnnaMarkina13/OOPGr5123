@@ -5,6 +5,9 @@ package ru.markina.student.app.domain.student.group;
  */
 public class StudentGroupComparableFactory {
 
+    private StudentGroupComparableFactory() {
+    }
+
     /**
      * @param studentGroup - группа студентов
      * @return объект класса StudentGroupSizeComparable, в котором реализован механизм сравнения по количеству студентов
