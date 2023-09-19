@@ -1,3 +1,5 @@
+package ru.markina.oop;
+
 import ru.markina.oop.Market;
 import ru.markina.oop.OrdinaryClient;
 import ru.markina.oop.PromotionalClient;
