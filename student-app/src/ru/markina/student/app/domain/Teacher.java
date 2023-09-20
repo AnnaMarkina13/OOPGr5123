@@ -1,8 +1,10 @@
 package ru.markina.student.app.domain;
 
+import ru.markina.student.app.services.EmployeeService;
+
 import java.time.LocalDate;
 
-public class Teacher extends Person {
+public class Teacher extends Employee {
 
     /**
      * поле academicDegree - ученая степень
@@ -11,11 +13,11 @@ public class Teacher extends Person {
     private AcademicDegree academicDegree;
 
     public Teacher(String name, LocalDate birthDate) {
-        super(name, birthDate);
+        super(name, birthDate, "учитель");
     }
 
     public Teacher(String name, LocalDate birthDate, AcademicDegree academicDegree) {
-        super(name, birthDate);
+        super(name, birthDate, "учитель");
         this.academicDegree = academicDegree;
     }
 
@@ -34,6 +36,12 @@ public class Teacher extends Person {
         } else {
             System.out.printf("Преподаватель %s уже имеет высшую ученую степень - %s", name, academicDegree);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Учитель: Имя - " + name +
+                ", Дата рождения = " + birthDate;
     }
 
     public enum AcademicDegree {

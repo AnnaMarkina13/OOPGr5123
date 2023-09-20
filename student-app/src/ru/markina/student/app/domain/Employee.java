@@ -47,4 +47,11 @@ public class Employee extends Person {
             System.out.printf("Сотрудник %s должен сначала уволиться с текущей должности: %s", name, specialty);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Сотрудник: Имя - " + name +
+                ", Дата рождения = " + birthDate +
+                ", Должность - " + specialty;
+    }
 }
